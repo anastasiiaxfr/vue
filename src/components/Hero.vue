@@ -2,7 +2,7 @@
  <section class="hero">
  
     <b-container>
-    <b-row class="align-items-center text-center text-sm-left">
+    <b-row class="align-items-center">
     <b-col md=6>
     
     <h1>
