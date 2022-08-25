@@ -4,7 +4,7 @@
       <b-row justify-content-center class="text-center">
         <h2 class="mb-5 pb-3"> Why Heroic Affiliates? </h2>
 
-        <b-col md="3" v-for="item in why" :key="item.title">
+        <b-col md="3" v-for="item in why" :key="item.title" class="my-4 my-sm-0">
        
           <figure class="why__box">
             <div class="why__pic">

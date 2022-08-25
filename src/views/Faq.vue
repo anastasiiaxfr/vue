@@ -195,11 +195,12 @@ h3
         &-header
             background: transparent
             border-color: $main
-
+           
     .btn
         background: transparent
         color: black
         min-width: auto
+        text-align: left
         &:hover, &:focus
             outline: none
             border: none

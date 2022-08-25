@@ -4,7 +4,7 @@
     <b-row class="py-5 text-center">
       <h1 class="mb-5"> Partners </h1>
 
-      <b-col md="2" v-for="partner in partners" :key="partner.title">
+      <b-col xlg=2 lg=3 md=4 v-for="partner in partners" :key="partner.title">
        <a :href="partner.link" target="_blank">
         <img  class="partners__logo" width="200" heigh="100" :src="require(`@/assets/img/partners/${partner.logo}`)" :alt="partner.title">
       </a>

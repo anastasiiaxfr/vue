@@ -2,7 +2,7 @@
  <section class="hero">
  
     <b-container>
-    <b-row class="align-items-center">
+    <b-row class="align-items-center text-center text-sm-left">
     <b-col md=6>
     
     <h1>
@@ -21,7 +21,7 @@
     </button>
 
     </b-col>
-    <b-col md=6>
+    <b-col md=6 class="hero__pic">
         <img class="hero__img" src="@/assets/img/hero.png" alt="">
     </b-col>
     </b-row>
@@ -48,6 +48,9 @@ export default {
     @media only screen and (max-width: 528px) 
         padding-top: 50px
         padding-bottom: 50px
+
+    &__pic
+        position: relative
 
     &__img
         position: absolute
