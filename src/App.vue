@@ -18,9 +18,4 @@ export default ({
 })
 </script>
 
-<style lang="sass">
-$main: #deb657
-$dark: #212529
-body, html
-  background-color: $dark
-</style>
+
