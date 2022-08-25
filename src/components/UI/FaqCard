@@ -1,0 +1,42 @@
+<template>
+    <div
+    class="accordion col-md-9 mx-auto"
+    role="tablist"
+    v-for="(item, index) in faq"
+    :key="`name-${index}`"
+  >
+    <b-card no-body class="mb-1">
+      <b-card-header header-tag="header" class="p-1" role="tab">
+        <b-button
+          block
+          v-b-toggle="'accordion-' + index"
+          variant="info"
+        >
+          {{ item.term }}
+        </b-button>
+      </b-card-header>
+      <b-collapse
+        :id="`accordion-${index}`"
+        visibles
+        accordion="my-accordion"
+        role="tabpanel"
+      >
+        <b-card-body>
+          <b-card-text>
+            {{ item.description }}
+          </b-card-text>
+          <b-card-text> </b-card-text>
+        </b-card-body>
+      </b-collapse>
+    </b-card>
+</div>
+</template>
+
+<script>
+  // @ is an alias to /src
+
+  export default {
+    name: "FaqCard",
+    props: ['faq'],
+  };
+</script>

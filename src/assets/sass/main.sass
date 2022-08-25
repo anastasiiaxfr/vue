@@ -1,0 +1,59 @@
+$dark: #212529
+$main: #deb657
+$yellow: #e4831a
+$red: #e74220
+
+$sm: 528px
+
+*
+    user-select: none
+
+h1
+    color: $main
+    font-size: 3.5rem
+    font-weight: 900
+
+    @media only screen and (max-width: $sm) 
+        font-size: 2.5rem
+
+h2
+    font-size: 4rem
+    font-weight: 900
+    color: $main
+
+    @media only screen and (max-width: $sm) 
+        font-size: 2.5rem
+
+.title
+    &_sub
+        font-weight: 100
+
+
+.dark, .revenue, .why, .contacts, .hero, .brands, .partners
+    background-color: $dark
+    color: white
+
+img
+    max-width: 100%
+
+.btn
+    background-color: $main
+    background: linear-gradient(45deg, $yellow, $red)
+    border: none
+    color: white
+    border-radius: 50pc
+    font-size: 20px
+    min-width: 200px
+    padding: 12px 25px
+    margin-right: 20px
+    transition: all 0.5s
+
+    &:hover, &:active, &:focus
+        background: linear-gradient(45deg, $red, $yellow)
+        border: none
+        
+    &:last-child
+        margin-right: 0
+
+    @media only screen and (max-width: $sm) 
+        min-width: auto
