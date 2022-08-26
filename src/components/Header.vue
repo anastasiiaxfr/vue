@@ -10,13 +10,13 @@
 
     <b-collapse id="nav-collapse" is-nav>
       <!-- Right aligned nav items -->
-      <b-navbar-nav class="header__menu">
-        <li><router-link to="/#why"> Why Us </router-link></li>
-        <li><router-link to="/#commissions"> Commissions </router-link></li>
+      <b-navbar-nav class="menu">
+        <li><a href="/#why"> Why Us </a></li>
+        <li><a href="/#commissions"> Commissions </a></li>
         <li><router-link to="/brands"> Brands </router-link></li>
         <li><router-link to="/faq"> Faq </router-link></li>
          <li><router-link to="/partners"> Partners </router-link></li>
-        <li><router-link to="/#contacts"> Contacts </router-link></li>
+        <li><a href="/#contacts"> Contacts </a></li>
             
         <!-- <b-nav-item-dropdown text="Lang" right>
           <b-dropdown-item href="#">EN</b-dropdown-item>
@@ -46,11 +46,9 @@ export default {
 </script>
 
 
-
-
 <style scoped lang="sass">
 $main: #deb657
-.header__menu
+.menu
     text-transform: uppercase
     letter-spacing: 2px
     font-size: 16px

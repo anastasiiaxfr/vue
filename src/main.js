@@ -12,6 +12,7 @@ Vue.use(IconsPlugin)
 
 import '@/assets/sass/main.sass'
 
+
 Vue.config.productionTip = false
 
 

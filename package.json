@@ -14,6 +14,7 @@
     "vue": "^2.7.10",
     "vue-anchor-navigate": "^1.0.6",
     "vue-router": "^3.2.0",
+    "vue-scrollactive": "^0.9.3",
     "vuex": "^3.4.0"
   },
   "devDependencies": {
