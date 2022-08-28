@@ -1,45 +1,60 @@
 <template>
-    <div class="cart-item">
-        <img class="cart-item__img" :src="require(`@/assets/img/${cart_item_data.image}`)" alt="">
-        <div class="cart-item__info">
-            <p>{{ cart_item_data.name }}</p>
-            <p>{{ cart_item_data.price }}</p>
-            <p>{{ cart_item_data.article }}</p>
-        </div>
-        <div class="cart-item__quantity">
-            <p>Quantity:</p>
-            {{ cart_item_data.quantity }}
-        </div>
-        <button @click="deleteFromCart">Delete</button>
+  <div class="cart-item">
+    <img
+      class="cart-item__img"
+      :src="require(`@/assets/img/${cart_item_data.image}`)"
+      alt=""
+    />
+    <div class="cart-item__info">
+      <p>{{ cart_item_data.name }}</p>
+      <p>{{ cart_item_data.price | toFix }}</p>
+      <p>{{ cart_item_data.article }}</p>
     </div>
+    <div class="cart-item__quantity">
+      <p>Quantity:</p>
+      <button @click="decrementItem">-</button>
+      {{ cart_item_data.quantity }}
+      <button @click="incrementItem">+</button>
+    </div>
+    <button @click="deleteFromCart">Delete</button>
+  </div>
 </template>
 
 <script>
+import toFix from "@/components/filters/toFix"
+
 export default {
-    name: 'CartItem',
-    props: {
-        cart_item_data: {
-            type: Object,
-            default(){
-                return {}
-            }
-        }
+  name: "CartItem",
+  props: {
+    cart_item_data: {
+      type: Object,
+      default() {
+        return {};
+      },
     },
-    data() {
-        return {
-            
-        };
-    },
+  },
+  data() {
+    return {};
+  },
+  filters: {
+    toFix,
+  },
+  
+  mounted() {
+    this.$set(this.cart_item_data, "quantity", 1);
+  },
 
-    mounted() {
-        this.$set(this.cart_item_data, 'quantity', 1)
+  methods: {
+    decrementItem(){
+        this.$emit("decrement")
     },
-
-    methods: {
-        deleteFromCart(){
-            this.$emit('deleteFromCart')
-        },
+    incrementItem(){
+        this.$emit("increment")
     },
+    deleteFromCart() {
+      this.$emit("deleteFromCart");
+    },
+  },
 };
 </script>
 

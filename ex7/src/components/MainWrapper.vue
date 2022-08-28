@@ -1,6 +1,9 @@
 <template>
   <div class="main-wrapper">
-    <router-view></router-view>
+    <keep-alive>  
+        <router-view></router-view>
+    </keep-alive>
+    
     <!-- <Catalog></Catalog>
     <Cart v-if="CART.length"
     :cart_data="CART"
@@ -11,16 +14,16 @@
 <script>
 // import Catalog from "@/components/Catalog";
 // import Cart from "@/components/Cart";
-import {mapGetters} from 'vuex'
+// import {mapGetters} from 'vuex'
 
 
 export default {
   name: "MainWrapper",
 //   components: { Catalog, Cart },
   props: {},
-  computed: {
-    ...mapGetters(['CART'])
-  },
+//   computed: {
+//     ...mapGetters(['CART'])
+//   },
   methods: {},
 };
 </script>

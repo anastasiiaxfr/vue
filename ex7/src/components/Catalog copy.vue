@@ -1,6 +1,9 @@
 <template>
   <div>
- <h1> Catalog</h1>
+<div class="catalog__link_cart">
+  Cart: 0
+</div> 
+ <h1> Catalog </h1>
  <div class="catalog">
   <CatalogItem v-for="product in products" :key="product.article" :product_data="product"></CatalogItem>
   </div>
@@ -34,4 +37,11 @@ export default {
 .catalog 
     display: flex
     flex-wrap: wrap
+    &__link_to_cart
+      position: absolute
+      top: 10px
+      right: 10px
+      padding: 16px
+      border: solid 1px #333
+
 </style>

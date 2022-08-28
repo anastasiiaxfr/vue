@@ -22,13 +22,14 @@ const routes = [
   },
   {
     path: '/catalog',
-    name: 'Catalog',
+    name: 'catalog',
     component: Catalog
   },
   {
     path: '/cart',
-    name: 'Cart',
-    component: Cart
+    name: 'cart',
+    component: Cart,
+    props: true
   },
 ]
 

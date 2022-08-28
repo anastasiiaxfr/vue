@@ -1,5 +1,11 @@
 <template>
   <div>
+    <router-link :to="{name: 'cart', params: {cart_data: CART}}">
+      <div class="catalog__link_to_cart">
+        Cart: {{ CART.length }}
+      </div> 
+    </router-link>
+  
     <h1>Catalog</h1>
     <div class="catalog">
       <CatalogItem
@@ -35,7 +41,7 @@ export default {
     // },
   },
   computed: {
-    ...mapGetters(["PRODUCTS"]),
+    ...mapGetters(["PRODUCTS", "CART"]),
   },
   // async created() {
   //   this.products = await this.fetchTasks();
@@ -55,4 +61,10 @@ export default {
 .catalog
   display: flex
   flex-wrap: wrap
+  &__link_to_cart
+    position: absolute
+    top: 10px
+    right: 10px
+    padding: 16px
+    border: solid 1px #333
 </style>
